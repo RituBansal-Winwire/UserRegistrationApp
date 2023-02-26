@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="UserRegistrationApp.HomePage" Title="Home">
+    <ContentPage Title="Page1">
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection>
+                        <TextCell Text="Name" Detail="Test"></TextCell>
+                        <SwitchCell Text="Notification" On="true"></SwitchCell>
+                       
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Page2">
+        <StackLayout>
+            <Label Text="Page2!"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
