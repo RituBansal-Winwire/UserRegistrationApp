@@ -9,14 +9,17 @@ using Xamarin.Forms.Xaml;
 
 namespace UserRegistrationApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : TabbedPage
-	{
-		public HomePage ()
-		{
-			InitializeComponent ();
-		}
-
-      
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class HomePage : ContentPage
+    {
+        public HomePage()
+        {
+            InitializeComponent();
+            label1.Text= Application.Current.Properties["Name"].ToString();
+        }
+        async private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserList());
+        }
     }
 }

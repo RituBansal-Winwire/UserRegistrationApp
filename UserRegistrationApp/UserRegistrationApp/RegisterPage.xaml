@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UserRegistrationApp.RegisterPage" Title="Register">
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
+        <StackLayout Spacing="5" Padding="1">
             <Label Text="First Name:" FontSize="Medium" />
             <Entry Text="" FontSize="Medium" x:Name="FName" />
             <Label Text="Last Name:" FontSize="Medium" />
@@ -12,9 +12,13 @@
             <Entry Text="" FontSize="Medium" x:Name="email"/>
             <Label Text="Phone Number:" FontSize="Medium" />
             <Entry Text="" FontSize="Medium" Keyboard="Numeric" x:Name="phone" />
+            <Label Text="UserName:" FontSize="Medium" />
+            <Entry Text="" FontSize="Medium" x:Name="UName"/>
+            <Label Text="Password:" FontSize="Medium" />
+            <Entry Text="" FontSize="Medium" x:Name="Pwd"/>
             <StackLayout Padding="10,0,10,0" Orientation="Horizontal">
                 <Button  Text="Save"  Clicked="Button_Clicked_1" HorizontalOptions="FillAndExpand" />
-               
+                
             </StackLayout>
            
         </StackLayout>
