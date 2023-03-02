@@ -35,14 +35,13 @@ namespace UserRegistrationApp
         {
             if (uname.Text != "" && pwd.Text != "")
             {
-                foreach (var details in _user) {
-                    if (uname.Text == details.UName && pwd.Text == details.Pwd) {
+               var use= _user.Where(x => x.UName.Contains(uname.Text) && x.Pwd.Contains(pwd.Text)).Count();
+                 if (use >= 1) {
                         Application.Current.Properties["Name"] = uname.Text;
                         await Navigation.PushAsync(new HomePage());
                         return;
-                    }
-                }
-                await DisplayAlert("Fail", "Login Failed", "Ok");
+                 }
+                 await DisplayAlert("Fail", "Login Failed", "Ok");
             }
             else
                 await DisplayAlert("Fail", "Enter UserName and Password", "Ok");
